@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <title>Snake Game</title>
+    
+</head>
+
+<body>
+
+    <!-- Button to start the game -->
+    <div class="start-game-btn">
+        <button>Start Game</button>
+    </div>
+
+    <!-- Options for game settings -->
+    <div class="options">
+        <div class="difficulty">
+            <h2>Difficulty</h2>
+            <!-- Difficulty selection buttons -->
+            <button class="easy-btn diffi-btn">Easy</button>
+            <button class="hard-btn diffi-btn">Hard</button>
+        </div>
+
+        <!-- Score display -->
+        <div class="score-con">
+            <p>Score: <span>0</span></p>
+        </div>
+
+        <div class="music">
+            <h2>Music</h2>
+            <!-- Music toggle buttons -->
+            <button class="music-btn on-btn">ON</button>
+            <button class="music-btn off-btn">OFF</button>
+        </div>
+
+        <!-- Menu icon for mobile -->
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Mobile menu for difficulty options -->
+    <div class="mobile-menu main-mobile-menu">
+        <p class="mobile-menu-diffi">Difficulty</p>
+        <p class="mobile-menu-music">Music</p>
+
+    </div>
+
+    <!-- Mobile menu for music options -->
+    <div class="mobile-menu music-mobile-menu">
+        <button class="music-btn">ON</button>
+        <button class="music-btn">OFF</button>
+    </div>
+
+    <!-- Mobile menu for difficulty options -->
+    <div class="mobile-menu diffi-mobile-menu">
+        <button class="easy-btn diffi-btn">Easy</button>
+        <button class="hard-btn diffi-btn">Hard</button>
+    </div>
+
+    <!-- Main game area -->
+    <div class="game-main-body">
+        <div class="game-container">
+        </div>
+
+        <!-- Control buttons for mobile -->
+        <div class="buttons">
+            <div class="up-container">
+                <button class="mobile-btn up"><i class="fa-solid fa-angle-up"></i></button>
+            </div>
+            <div class="remaining-btns">
+                <button class="mobile-btn left"><i class="fa-solid fa-angle-left"></i></button>
+                <button class="mobile-btn down"><i class="fa-solid fa-angle-down"></i></button>
+                <button class="mobile-btn right"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the game script -->
+    <script src="game.js"></script>
+    
+</body>
+
+</html>

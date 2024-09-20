@@ -1,0 +1,314 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+/* Global styles */
+* {
+    font-family: New Tegomin, Roboto, 'serif';
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    width: 100vw;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+     }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+/* Start game button styles */
+.start-game-btn {
+    position: absolute;
+    top: 40vh;
+    left: 32.5vw;
+    height: 20vmin;
+    width: 25vmax;
+    z-index: 10;
+    display: flex;
+    border: 4px solid #efd814;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d980d;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+    animation: fade-in 1.5s ease-in-out;
+}
+
+/* Options container styles */
+.options {
+    height: 10vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vmax;
+    align-items: center;
+    filter: blur(10px);
+}
+
+/* Difficulty and music settings styles */
+.difficulty,
+.music {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 auto;
+    font-weight: 500;
+}
+
+/* Score display styles */
+.score-con p {
+    font-size: 2.3vmax;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+/* Headings for difficulty and music */
+.difficulty h2,
+.music h2 {
+    letter-spacing: 1.5px;
+    font-size: 2.2vmax;
+    margin-right: 0.75vmax;
+}
+
+/* Button styles for difficulty, music, and start game */
+.difficulty button,
+.music button,
+.start-game-btn button {
+    font-size: 1.5vmax;
+    letter-spacing: 0.75px;
+    padding: 0.4vmax;
+    border-radius: 10px;
+    background-color: #efd814;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+    margin-right: 0.5vmax;
+}
+
+/* Button hover effect */
+.difficulty button:hover,
+.music button:hover,
+.start-game-btn button:hover {
+    background-color: #bfac06;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Menu icon styles */
+#menu-icon {
+    display: none;
+    position: absolute;
+    right: 3vw;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    position: absolute;
+    background-color: #c6c61a;
+    height: 25vh;
+    top: 20vh;
+    z-index: 10;
+    left: 25vw;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50vw;
+    border-radius: 20px;
+    display: none;
+    animation: fade-in 1s ease-in-out;
+}
+
+/* Mobile menu text and button styles */
+.mobile-menu p,
+.mobile-menu button {
+    background: transparent;
+    font-size: 3.5vh;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+}
+
+/* Specific mobile menus for music and difficulty */
+.music-mobile-menu,
+.diffi-mobile-menu {
+    display: none;
+}
+
+/* Game main body styles */
+.game-main-body {
+    display: flex;
+    justify-content: center;
+    height: 87vh;
+    width: 100vw;
+    padding-right: 5vmax;
+    filter: blur(10px);
+}
+
+/* Game container styles */
+.game-container {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    border: 7px solid #4A4A4A;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    grid-row-gap: 1px;
+    grid-column-gap: 1px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
+}
+
+/* Snake head styles */
+.snake-head {
+    background-color: #FF9800;
+    border-top-left-radius: 11.5px;
+    border-top-right-radius: 11.5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    position: relative;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+/* Snake head details */
+.snake-head::before,
+.snake-head::after {
+    content: "";
+    background-color: #2E7D32;
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.snake-head::before {
+    top: 17%;
+    left: 15%;
+}
+
+.snake-head::after {
+    top: 17%;
+    right: 15%;
+}
+
+/* Snake body styles */
+.snake-body {
+    background-color: #388E3C;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Last part of the snake's body */
+.snake-last-body-part {
+    background-color: #388E3C;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border: 1px solid #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Food styles */
+.food {
+    background-color: #f44526;
+    border-radius: 27px;
+    border: 1px solid #CC0000;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Button container styles */
+.buttons {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Button styles within the buttons container */
+.buttons button {
+    font-size: 4vh;
+    padding: 3vh;
+    border-radius: 10px;
+    margin-right: 1.5vh;
+    margin-top: 1.5vh;
+    background-color: #e0e04d;
+}
+
+/* Responsive styles for screens smaller than 1024px */
+@media (max-width: 1024px) {
+    body {
+        background-size: cover;
+    }
+
+    .options {
+        height: 8vh;
+    }
+
+    .score-con p {
+        font-size: 3.2vmax;
+    }
+
+    .difficulty,
+    .music {
+        display: none;
+    }
+
+    .start-game-btn {
+        height: 25vmin;
+        width: 70vw;
+        left: 15vw;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 3.75vmax;
+    }
+
+    .start-game-btn button {
+        font-size: 3vmax;
+        padding: 0.8vmax;
+    }
+
+    .game-main-body {
+        height: 92vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 0;
+        padding-bottom: 4vh;
+    }
+
+    .game-container {
+        height: 72%;
+        width: 95%;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(14, 1fr);
+        grid-row-gap: 0.25px;
+        grid-column-gap: 0.25px;
+    }
+
+    .buttons {
+        display: flex;
+    }
+}
