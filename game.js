@@ -56,9 +56,9 @@ function checkWidth() {
 
     screenWidth = window.innerWidth;
     if (screenWidth <= 1024) {
-        framesPerRate = 9; //speed of game on mobile devices
+        framesPerRate = 7; //speed of game on mobile devices
     } else {
-        framesPerRate = 17; //speed of game laptops
+        framesPerRate = 15; //speed of game laptops
     }
 }
 
@@ -341,14 +341,14 @@ document.querySelectorAll(".diffi-btn").forEach((diffBtn) => {
             const {
                 innerHTML
             } = event.target;
-            framesPerRate = innerHTML === "Easy" ? 9 : 13;
+            framesPerRate = innerHTML === "Easy" ? 7 : 11;
             difficulty = innerHTML.toLowerCase();
 
         } else {
             const {
                 innerHTML
             } = event.target;
-            framesPerRate = innerHTML === "Easy" ? 17 : 22;
+            framesPerRate = innerHTML === "Easy" ? 15 : 20;
             difficulty = innerHTML.toLowerCase();
 
         }
