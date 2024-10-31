@@ -248,12 +248,12 @@ body {
 /* Button styles within the buttons container */
 .buttons button {
     font-size: 4vh;
-    padding: 3vh;
+    padding: 3.3vh;
     border-radius: 10px;
     margin-right: 1.5vh;
     margin-top: 1.5vh;
     background-color: #e0e04d;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.8);
 }
 
 /* Responsive styles for screens smaller than 1024px */
